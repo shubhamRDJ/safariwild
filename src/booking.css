@@ -1,0 +1,323 @@
+/* ─── BOOKING PAGE ───────────────────────────────────────────────────────────── */
+
+.booking {
+  min-height: 100vh;
+  background: #0a0a08;
+  padding-top: 90px;
+}
+
+.booking__inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 1.5rem);
+}
+
+.booking__eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  color: #d4af37;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.booking__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #f0e6d0;
+  line-height: 1.2;
+}
+
+.booking__title em {
+  color: #d4af37;
+  font-style: italic;
+}
+
+/* Form */
+.booking__form {
+  margin-top: 2.5rem;
+}
+
+.booking__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.booking__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.booking__label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.78rem;
+  color: #a89060;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.booking__input,
+.booking__select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: #f0e6d0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.booking__input:focus,
+.booking__select:focus {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.booking__input::placeholder {
+  color: #5a4a30;
+}
+
+.booking__select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.booking__submit-btn {
+  background: linear-gradient(135deg, #d4af37, #a07d20);
+  border: none;
+  color: #0a0a08;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s;
+}
+
+.booking__submit-btn:hover {
+  opacity: 0.9;
+}
+
+.booking__submit-btn--success {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+/* Zone map */
+.booking__map-section {
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.booking__map-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  color: #d4af37;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.booking__map-hint {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.88rem;
+  color: #6a5a40;
+  margin-bottom: 1rem;
+}
+
+.booking__map-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 14px;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.booking__map-svg {
+  width: 100%;
+  max-height: 420px;
+  display: block;
+}
+
+/* Zone legend */
+.booking__zone-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.booking__zone-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #6a5a40;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.booking__zone-btn--active {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+}
+
+/* Zone detail card */
+.booking__zone-detail {
+  margin-top: 1rem;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.booking__zone-detail-icon {
+  font-size: 1.8rem;
+}
+
+.booking__zone-detail-name {
+  font-family: 'Playfair Display', serif;
+  color: #d4af37;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.booking__zone-detail-desc {
+  font-family: 'Cormorant Garamond', serif;
+  color: #7a6a50;
+  font-size: 0.82rem;
+}
+
+/* Google map section */
+.booking__location {
+  margin-top: 3.5rem;
+}
+
+.booking__location-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  color: #d4af37;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.booking__location-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.88rem;
+  color: #6a5a40;
+  margin-bottom: 1rem;
+}
+
+.booking__map-embed {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.booking__map-embed-label {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  z-index: 2;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.65rem;
+  color: rgba(212, 175, 55, 0.5);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: rgba(8, 8, 6, 0.75);
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.booking__map-embed iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+  height: 380px;
+  filter: grayscale(0.3) contrast(1.05);
+}
+
+.booking__map-embed-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  padding: 0.9rem 1.2rem;
+  gap: 1.5rem;
+}
+
+.booking__map-place {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.booking__map-place-icon {
+  font-size: 1rem;
+}
+
+.booking__map-place-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.82rem;
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.booking__map-place-addr {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.72rem;
+  color: #5a4a30;
+  letter-spacing: 0.04em;
+}
+
+.booking__map-phone {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.78rem;
+  color: #6a5a40;
+}
+
+.booking__map-open-link {
+  margin-left: auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 5px 14px;
+  text-decoration: none;
+  background: rgba(212, 175, 55, 0.06);
+  letter-spacing: 0.06em;
+  transition: all 0.2s;
+}
+
+.booking__map-open-link:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .booking__grid {
+    grid-template-columns: 1fr;
+  }
+}

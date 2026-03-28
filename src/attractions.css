@@ -1,0 +1,224 @@
+/* ─── ATTRACTIONS SECTION ────────────────────────────────────────────────────── */
+
+.attractions {
+  background: #080807;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem);
+}
+
+.attractions__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.attractions__header {
+  margin-bottom: 2.5rem;
+}
+
+.attractions__eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  color: #d4af37;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.attractions__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #f5efe0;
+  line-height: 1.2;
+}
+
+.attractions__title em {
+  color: #d4af37;
+  font-style: italic;
+}
+
+/* ── Desktop layout ─────────────────────────────────────────────────────────── */
+.attractions__layout-desktop {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Sidebar */
+.attractions__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.attractions__sidebar-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  color: #a89060;
+  font-size: 0.95rem;
+  text-align: left;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.attractions__sidebar-btn:hover {
+  background: rgba(212, 175, 55, 0.06);
+  border-color: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+}
+
+.attractions__sidebar-btn--active {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.3);
+  color: #d4af37;
+}
+
+.attractions__sidebar-num {
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.attractions__sidebar-label {
+  flex: 1;
+}
+
+.attractions__sidebar-arrow {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.attractions__sidebar-btn--active .attractions__sidebar-arrow {
+  opacity: 1;
+}
+
+/* Display panel */
+.attractions__display {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.attractions__display-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.attractions__display-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(10, 10, 8, 0.92));
+  padding: 2.5rem 2rem 1.8rem;
+}
+
+.attractions__display-title {
+  font-family: 'Playfair Display', serif;
+  color: #f5efe0;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.attractions__display-desc {
+  font-family: 'Cormorant Garamond', serif;
+  color: #c8b89a;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ── Mobile/Tablet layout ────────────────────────────────────────────────────── */
+.attractions__layout-mobile {
+  display: block;
+}
+
+.attractions__mobile-img-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.attractions__mobile-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.attractions__mobile-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(10, 10, 8, 0.92));
+  padding: 2rem 1.5rem 1.2rem;
+}
+
+.attractions__mobile-title {
+  font-family: 'Playfair Display', serif;
+  color: #f5efe0;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.attractions__mobile-desc {
+  font-family: 'Cormorant Garamond', serif;
+  color: #c8b89a;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Horizontal tab scroll */
+.attractions__tab-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 55, 0.2) transparent;
+}
+
+.attractions__tab-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.attractions__tab-scroll::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 2px;
+}
+
+.attractions__tab-btn {
+  flex-shrink: 0;
+  background: rgba(212, 175, 55, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 20px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  color: #a89060;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.attractions__tab-btn--active {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+}
+
+@media (min-width: 769px) {
+  .attractions__mobile-img {
+    height: 320px;
+  }
+}

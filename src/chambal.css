@@ -1,0 +1,170 @@
+/* ─── CHAMBAL SAFARI PAGE ────────────────────────────────────────────────────── */
+
+.chambal {
+  min-height: 100vh;
+  background: #0a0a08;
+  padding-top: 68px;
+}
+
+/* Hero */
+.chambal__hero {
+  position: relative;
+  height: 55vh;
+  overflow: hidden;
+  min-height: 240px;
+}
+
+.chambal__hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.chambal__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 10, 8, 0.3), rgba(10, 10, 8, 0.85));
+}
+
+.chambal__hero-content {
+  position: absolute;
+  bottom: clamp(1.5rem, 5vw, 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  padding: 0 clamp(1rem, 4vw, 1.5rem);
+}
+
+.chambal__hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.8rem;
+  color: #d4af37;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.chambal__hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  color: #f5efe0;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.chambal__hero-title em {
+  color: #d4af37;
+  font-style: italic;
+}
+
+/* Body */
+.chambal__body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 1.5rem);
+}
+
+.chambal__intro {
+  font-family: 'Cormorant Garamond', serif;
+  color: #a89060;
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  line-height: 2;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto clamp(2rem, 6vw, 4rem);
+}
+
+/* Highlight cards */
+.chambal__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.chambal__card {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.chambal__card:hover {
+  background: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.25);
+  transform: translateY(-3px);
+}
+
+.chambal__card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.chambal__card-title {
+  font-family: 'Playfair Display', serif;
+  color: #f5efe0;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chambal__card-desc {
+  font-family: 'Cormorant Garamond', serif;
+  color: #a89060;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* CTA */
+.chambal__cta {
+  text-align: center;
+}
+
+.chambal__cta-btn {
+  background: linear-gradient(135deg, #d4af37, #a07d20);
+  border: none;
+  color: #0a0a08;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 36px;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chambal__cta-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Mobile overrides */
+@media (max-width: 600px) {
+  .chambal__hero {
+    height: 45vh;
+  }
+
+  .chambal__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .chambal__card {
+    padding: 1.2rem 1rem;
+  }
+
+  .chambal__card-icon {
+    font-size: 2rem;
+  }
+
+  .chambal__card-title {
+    font-size: 0.9rem;
+  }
+}
